@@ -1,0 +1,62 @@
+
+多线程编程
+
+
+线程安全
+ 原子性 有序性  可见性
+ happens-before   8+6
+ 
+ 有序性  可见性    Volatile   加锁：  锁总线  锁缓存行  MESI  ： 必须从主存中加载最新数据    lock
+ 
+ 原子性：  读，写     CAS  compare  update     lock
+   
+ 加锁： 序列化的访问临界资源   cas + 队列  FIFO  串行化
+  AQS: state         同步队列  双向链表   条件队列	nextWaiter	
+  
+  Synchronized   mutex   Object Monitor   wait()  notify/notifyAll
+
+java锁体系：
+共享锁和独占锁（互斥锁）
+偏向锁，轻量级锁，重量级锁  
+自旋锁  
+公平锁，非公平锁
+悲观锁，乐观锁
+  
+自己实现一个锁吗？ AQS 
+
+分布式锁： 跨JVM    redis   mysql  zookeeper
+
+性能
+10000  1M  10G
+创建线程   执行线程i++   销毁线程   
+线程上下文切换：  保存thread1上下文  加载thread2的上下文  
+
+线程池：  线程复用
+
+Runnable
+Callable
+
+异步
+
+
+中间件 
+mycat
+
+jvm tomcat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
